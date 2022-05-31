@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;500&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    margin: 0;
+    font-family: 'Dancing Script', cursive;
+    line-height: 1.5;
+    font-weight: 300;
+    animation-name: scrolling;
+    animation-duration: 6s;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+@keyframes scrolling
+{
+    0%
+    {
+        overflow-y: hidden;
+    }
+
+    100% {}
+}
+
+/* background video */
+
+section.video-container
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transform: scale(108%, 108%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+
+/* header */
+
+header#head
+{
+    background-color: rgb(107, 177, 252);
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+header#head img
+{
+    padding: 0 10px;
+}
+
+header#head ul
+{
+    list-style: none;
+}
+
+header#head ul li
+{
+    font-size: 20px;
+    display: inline-block;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header#head ul li a 
+{
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: 87px;
+}
+
+header#head ul li a:hover
+{
+    background-color: pink;
+    /* color: white; */
+}
+
+/* header contents configuration */
+
+#intro
+{
+    height: 877px;
+    background-image: url(./241434583_1735405913323671_3843456074700379487_n.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+#intro b
+{
+    padding-top: 60px;
+    font-size: 64px;
+    animation-name: title;
+    animation-duration: 1.5s;
+    color: white;
+}
+
+@keyframes title
+{
+    0% {opacity: 0; transform: scale(150%, 150%);}
+    100% {opacity: 1; transform: scale(100%, 100%)}
+}
+
+#intro p
+{
+    font-size: 23px;
+    animation: mention 1.5s;
+    color: white;
+}
+
+@keyframes mention
+{
+    0% {opacity: 0; transform: scale(150%, 150%);}
+    100% {opacity: 1; transform: scale(100%, 100%);}
+}
+
+#intro .logos
+{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    position: relative;
+    animation: logo 2s;
+}
+
+@keyframes logo
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#intro .logos img
+{
+    padding: 20px 0;
+}
+
+/* section p1 configuration */
+
+#p1 .info .about
+{
+    /* background-image: url(./board.jpg); */
+    background-color: pink;
+    transform: scale(70%, 70%);
+    text-align: center;
+    position: relative;
+    border-radius: 30px;
+    padding: 40px;
+    margin: 0;
+}
+
+
+#p1 .image
+{
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+#p1 .image img
+{
+    padding: 10px;
+    border-radius: 40px;
+}
+
+/* section p2 configuration */
+
+#p2
+{
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#p2 .info
+{
+    /* background-image: url(./board.jpg);*/
+    background-color: pink;
+    transform: scale(80%);
+    border-radius: 30px;
+    padding: 40px;
+    padding-bottom: 80px;
+}
+
+#p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat-sukien
+{
+    /* padding-top: 40px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 200px;
+    text-align: center;
+}
+
+
+#p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat
+{
+    width: max-content;
+    border-radius: 20px;
+    padding: 0 6px;
+    background-image: url(./22865d37c50ee9c9f96e2cd3e9c7aecc.jpg);
+    /* background-color: rgb(135, 221, 255); */
+    background-size: cover;
+}
+
+#p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat p, .tieubansukien p
+{
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 20px 20px;
+    padding-left: 50px;
+}
+
+#p2 .info .bannoidung-truyenthong .bannoidung .tieubansukien
+{
+    width: max-content;
+    background-image: url(./22865d37c50ee9c9f96e2cd3e9c7aecc.jpg);
+    /* background-color: rgb(255, 191, 201); */
+    background-size: cover;
+    border-radius: 20px;
+    padding: 0 6px;
+}
+
+#p2 .info .bannoidung-truyenthong .bantruyenthong
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 20px; */
+}
+
+#p2 .info .bantruyenthong p
+{    
+    width: max-content;
+    background-image: url(./22865d37c50ee9c9f96e2cd3e9c7aecc.jpg);
+    /* background-color: greenyellow; */
+    background-size: cover;
+    border-radius: 20px;
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+/* section #p3 */
+#p3
+{
+    display: flex;
+    padding-top: 20%;
+    text-align: center;
+    background-size: cover;
+    justify-content: center;
+}
+
+#p3 .info
+{
+    /* background-image: url(./board.jpg); */
+    background-color: pink;
+    transform: scale(80%);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+#p3 .info .contents .truongbannoidung-truyenthong
+{
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+#p3 .info .contents .truongbannoidung-truyenthong .phonoidung
+{
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: auto auto;   
+    grid-gap: 10px;
+    text-align: center;
+}
+
+#p3 .info .contents p
+{
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+#p3 .info .contents h1
+{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.35vw;
+}
+
+
+/* section #p4 */
+#p4
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+
+#p4 .info .image img
+{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#p4 .info h1
+{
+    transform: scale(30%);
+    background-color: pink;
+    font-size: 5vw;
+    border-radius: 50px;
+}
+
+/* section #p5 */
+
+#p5
+{
+    padding-top: 30%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#p5 .advice
+{
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: pink;
+    background-size: cover;
+}
+
+#p5 .advice p
+{
+    font-size: 30px;
+}
+
+#p5 .contents
+{
+    z-index: 1;
+}
+
+#p5 .social
+{
+    padding-top: 30%;
+    margin-bottom: 50px;
+}
+
+#p5 .social .meta a:hover
+{
+    opacity: 0.5;
+}
+
+#p5 .society img
+{
+    padding: 20px;
+}
+
+.reveal
+{
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+
+.reveal.active
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
