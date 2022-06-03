@@ -83,6 +83,7 @@ header#head ul li a
     text-decoration: none;
     padding: 0 20px;
     line-height: 87px;
+    transition: all 0.2s ease 0s;
 }
 
 header#head ul li a:hover
