@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;500&display=swap');
+
 *
 {
     margin: 0;
@@ -54,6 +55,7 @@ header#head
     background-color: rgb(107, 177, 252);
     position: fixed;
     width: 100%;
+    /* height: fit-content; */
     display: flex;
     justify-content: space-between;
     z-index: 1;
