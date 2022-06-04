@@ -54,7 +54,6 @@ header#head
     background-color: rgb(107, 177, 252);
     position: fixed;
     width: 100%;
-    /* height: fit-content; */
     display: flex;
     justify-content: space-between;
     z-index: 1;
@@ -67,7 +66,6 @@ header#head img
 
 header#head ul
 {
-    padding: 0 80px;
     list-style: none;
 }
 
