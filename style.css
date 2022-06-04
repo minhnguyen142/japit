@@ -4,6 +4,7 @@
 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body
@@ -49,10 +50,11 @@ section.video-container
 
 header#head
 {
+    padding: 0 40px;
     background-color: rgb(107, 177, 252);
     position: fixed;
     width: 100%;
-    height: fit-content;
+    /* height: fit-content; */
     display: flex;
     justify-content: space-between;
     z-index: 1;
@@ -60,11 +62,12 @@ header#head
 
 header#head img
 {
-    padding: 0 10px;
+    padding-top: 7px;
 }
 
 header#head ul
 {
+    padding: 0 80px;
     list-style: none;
 }
 
@@ -82,7 +85,7 @@ header#head ul li a
     display: block;
     text-decoration: none;
     padding: 0 20px;
-    line-height: 87px;
+    line-height: 95px;
     transition: all 0.2s ease 0s;
 }
 
@@ -96,7 +99,7 @@ header#head ul li a:hover
 
 #intro
 {
-    height: 877px;
+    height: 100vh;
     background-image: url(./241434583_1735405913323671_3843456074700379487_n.jpg);
     background-size: cover;
     display: flex;
@@ -109,7 +112,7 @@ header#head ul li a:hover
 #intro b
 {
     padding-top: 60px;
-    font-size: 64px;
+    font-size: 4.2vw;
     animation-name: title;
     animation-duration: 1.5s;
     color: white;
@@ -123,7 +126,7 @@ header#head ul li a:hover
 
 #intro p
 {
-    font-size: 23px;
+    font-size: 1.5vw;
     animation: mention 1.5s;
     color: white;
 }
@@ -136,7 +139,8 @@ header#head ul li a:hover
 
 #intro .logos
 {
-    padding-top: 30px;
+    top: 2%;
+    /* padding-top: 30px; */
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -363,11 +367,6 @@ header#head ul li a:hover
     border-radius: 30px;
     background-color: pink;
     background-size: cover;
-}
-
-#p5 .advice p
-{
-    font-size: 30px;
 }
 
 #p5 .social
