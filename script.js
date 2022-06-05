@@ -3,11 +3,11 @@ window.onbeforeunload = function ()
     window.scrollTo(0, 0);
 }
 
-document.addEventListener('click', musicPlay);
-function musicPlay() {
-    document.getElementById('audio').play();
-    document.removeEventListener('click', musicPlay);
-}
+// document.addEventListener('click', musicPlay);
+// function musicPlay() {
+//     document.getElementById('audio').play();
+//     document.removeEventListener('click', musicPlay);
+// }
 
 window.addEventListener('scroll', reveal)
 
