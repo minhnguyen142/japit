@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;500&display=swap');
+
 *
 {
     margin: 0;
@@ -53,31 +54,26 @@ header#head
     background-color: rgb(107, 177, 252);
     position: fixed;
     width: 100%;
-    /* height: fit-content; */
     display: flex;
     justify-content: space-between;
     z-index: 1;
-    animation-name: header;
-    animation-duration: 1.5s;
 }
 
-
-@keyframes header
-{
-    0%
-    {
-        opacity: 0;
-    }
-
-    100%
-    {
-        opacity: 1;
-    }
-}
-
-header#head img
+header#head .logo
 {
     padding-top: 7px;
+    margin-left: 4%;
+}
+
+header#head .menu
+{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    float: right;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5%;
 }
 
 header#head ul
@@ -109,14 +105,54 @@ header#head ul li a:hover
     /* color: white; */
 }
 
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(245, 126, 227);
+    opacity: 1;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+  }
+  
+.side-nav a 
+{
+    position: relative;
+    padding: 40px 10px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    transition: 0.3s;
+}
+  
+.side-nav a:hover 
+{
+    color: rgb(107, 177, 252);
+}
+  
+.side-nav .btn-close 
+{
+    cursor: pointer;
+    /* position: absolute; */
+    top: 0;
+    left: 50px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-bottom: 30px;
+}
+
 /* header contents configuration */
 
 #intro
 {
-    height: 100vh;
+    height: 906px;
     background-image: url(./241434583_1735405913323671_3843456074700379487_n.jpg);
     background-position: center;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     padding: 40px 20px;
@@ -128,7 +164,7 @@ header#head ul li a:hover
 #intro b
 {
     padding-top: 60px;
-    font-size: 4.2vw;
+    font-size: 350%;
     animation-name: title;
     animation-duration: 1.5s;
     color: white;
@@ -136,21 +172,21 @@ header#head ul li a:hover
 
 @keyframes title
 {
-    0% {opacity: 0; transform: scale(150%, 150%);}
-    100% {opacity: 1; transform: scale(100%, 100%)}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 #intro p
 {
-    font-size: 1.5vw;
+    font-size: 140%;
     animation: mention 1.5s;
     color: white;
 }
 
 @keyframes mention
 {
-    0% {opacity: 0; transform: scale(150%, 150%);}
-    100% {opacity: 1; transform: scale(100%, 100%);}
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 #intro .logos
@@ -186,7 +222,7 @@ header#head ul li a:hover
     text-align: center;
     position: relative;
     border-radius: 30px;
-    padding: 40px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -207,15 +243,6 @@ header#head ul li a:hover
 
 /* section p2 configuration */
 
-#p2
-{
-    padding-top: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
 #p2 .info
 {
     /* background-image: url(./board.jpg);*/
@@ -226,71 +253,41 @@ header#head ul li a:hover
     padding-bottom: 80px;
 }
 
-#p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat-sukien
-{
-    /* padding-top: 40px; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 200px;
-    text-align: center;
-}
 
+#p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat, .tieubansukien
 
-#p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat
 {
-    width: max-content;
+    width: fit-content;
     border-radius: 20px;
-    padding: 0 6px;
-    background-image: url(./22865d37c50ee9c9f96e2cd3e9c7aecc.jpg);
+    /* padding: 20px; */
+    background-image: url(./transparent-notebook-20.jpg);
     /* background-color: rgb(135, 221, 255); */
     background-size: cover;
 }
 
 #p2 .info .bannoidung-truyenthong .bannoidung .tieubanhocthuat p, .tieubansukien p
 {
-    font-size: 1.5vw;
-    text-align: justify;
-    padding: 20px 20px;
-    padding-left: 50px;
-}
-
-#p2 .info .bannoidung-truyenthong .bannoidung .tieubansukien
-{
-    width: max-content;
-    background-image: url(./22865d37c50ee9c9f96e2cd3e9c7aecc.jpg);
-    /* background-color: rgb(255, 191, 201); */
-    background-size: cover;
-    border-radius: 20px;
-    padding: 0 6px;
-}
-
-#p2 .info .bannoidung-truyenthong .bantruyenthong
-{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    /* padding-bottom: 20px; */
+    font-size: 150%;
+    text-align: left;
+    padding: 20px;
+    padding-left: 40px;
 }
 
 #p2 .info .bantruyenthong p
-{    
-    width: max-content;
-    background-image: url(./22865d37c50ee9c9f96e2cd3e9c7aecc.jpg);
-    /* background-color: greenyellow; */
+{
+    width: fit-content; 
+    background-image: url(./transparent-notebook-20.jpg);
     background-size: cover;
     border-radius: 20px;
-    font-size: 1.5vw;
-    text-align: justify;
+    font-size: 150%;
+    text-align: left;
     padding: 20px;
-    padding-left: 50px;
+    padding-left: 40px;
 }
 
 /* section #p3 */
 #p3
 {
-    display: flex;
     padding-top: 20%;
     text-align: center;
     background-size: cover;
@@ -341,9 +338,11 @@ header#head ul li a:hover
 /* section #p4 */
 #p4
 {
+    position: relative;
     display: flex;
     flex-direction: column;
     padding-top: 20%;
+    align-items: center;
     text-align: center;
     justify-content: center;
     margin-top: 80px;
@@ -356,18 +355,21 @@ header#head ul li a:hover
     border-radius: 20px;
 }
 
-#p4 .info h1
+#p4 .info p
 {
-    transform: scale(30%);
+    /* transform: scale(30%); */
+    font-weight: bold;
     background-color: pink;
-    font-size: 5vw;
+    font-size: 150%;
     border-radius: 50px;
+    padding: 5px 5px;
 }
 
 /* section #p5 */
 
 #p5
 {
+    position: relative;
     padding-top: 30%;
     text-align: center;
     display: flex;
@@ -393,7 +395,7 @@ header#head ul li a:hover
 
 #p5 .social .meta a:hover
 {
-    transition: all 0.4s ease;
+    transition: 0.4s ease;
     opacity: 0.5;
 }
 
@@ -404,18 +406,19 @@ header#head ul li a:hover
 
 .reveal
 {
-    transform: translateY(100px);
     opacity: 0;
-    transition: all 1.5s ease;
+    transition: 1s;
 }
 
 .reveal.active
 {
-    transform: translateY(0px);
     opacity: 1;
 }
 
-@media (max-width: 50%)
-{   
-
+@media screen and (max-width: 900px)
+{
+    #intro
+    {
+        height: 100vh;
+    }
 }
