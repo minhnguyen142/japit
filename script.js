@@ -1,13 +1,29 @@
 window.onbeforeunload = function () 
 {
     window.scrollTo(0, 0);
+    behavior: smooth;
 }
 
-// document.addEventListener('click', musicPlay);
-// function musicPlay() {
-//     document.getElementById('audio').play();
-//     document.removeEventListener('click', musicPlay);
-// }
+document.querySelectorAll('a[href^="#"]').forEach(anchor => 
+{
+    anchor.addEventListener('click', function (e) 
+    {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView
+        (
+            {
+            behavior: 'smooth'
+            }
+        );
+    });
+});
+
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('audio').play();
+    document.removeEventListener('click', musicPlay);
+}
 
 window.addEventListener('scroll', reveal)
 
@@ -25,5 +41,19 @@ function reveal()
         {
             reveals[i].classList.add('active');
         }
+        else
+        {
+            reveals[i].classList.remove('active');
+        }
     }
 }
+
+function openSlideMenu(){
+    document.getElementById('side-menu').style.width = '40%';
+    // document.getElementById('main').style.marginLeft = '250px';
+  }
+
+  function closeSlideMenu(){
+    document.getElementById('side-menu').style.width = '0';
+    // document.getElementById('main').style.marginLeft = '0';
+  }
