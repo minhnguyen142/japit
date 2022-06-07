@@ -49,7 +49,7 @@ function reveal()
 }
 
 function openSlideMenu(){
-    document.getElementById('side-menu').style.width = '45%';
+    document.getElementById('side-menu').style.width = '300px';
     // document.getElementById('main').style.marginLeft = '250px';
   }
 
